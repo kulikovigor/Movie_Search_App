@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon_one.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Movie Search App</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="wrapper">
+
+    <input type="text" name="" id="search" class="movie__input" placeholder="Название фильма">
+    <button id="search-btn" class="movie__btn">Найти</button>
+        </div>
+
+        <div class="validationMessage validationMessage_hidden"></div>
+
+            <div id="search-list" class="movies__search_list">
+            </div>
+
+    </div>
+    
+    <script src="api.js"></script>
+    <script src="movies/movies.view.js"></script>
+    <script src="movies/movies.logic.js"></script>
+</body>
+</html>
