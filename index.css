@@ -132,6 +132,8 @@ textarea {
 @media (max-width: 1170px) {
   .container {
     width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -141,7 +143,7 @@ textarea {
     padding-top: 80px;
   }
   .movie__input {
-    width: 380px;
+    width: 360px;
     height: 50px;
     font-size: 28px;
     line-height: 30px;
@@ -181,9 +183,13 @@ textarea {
 }
 
 @media (max-width: 540px) {
+  
+    .wrapper {
+    gap: 12px;
+  }
 
   .movie__input {
-    width: 320px;
+    width: 100%;
     height: 50px;
     font-size: 24px;
   }
