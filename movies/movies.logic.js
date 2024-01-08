@@ -20,9 +20,19 @@ searchBtnNode.addEventListener('click', function() {
         .then(result => {
             const movies = result.Search;
 
-            render(movies);
-        });
+            if (!movies||movies.length === 0){
+                alert('Нет таких фильмов');
+            }
 
+        // Сохраняем фильмы в localStorage перед отрисовкой
+        localStorage.setItem('movies', JSON.stringify(movies));
+
+        // Отрисовываем фильмы
+            render(movies);
+        })
+        .catch((error) => {
+            console.error('Ошибка при запросе фильмов:', error);
+            });
 });
 
 // функция Валидации на проверку длин.названия фильма
@@ -46,3 +56,11 @@ function validation () {
 
 // обработчик для проверки валидации на длин.названия фильма
 searchInputNode.addEventListener('input', validation);
+
+// При загрузке страницы восстановить фильмы из localStorage
+document.addEventListener("DOMContentLoaded", function () {
+const savedMovies = JSON.parse(localStorage.getItem("movies"));
+if (savedMovies && savedMovies.length > 0) {
+render(savedMovies);
+}
+});
