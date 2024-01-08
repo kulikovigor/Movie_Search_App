@@ -44,9 +44,6 @@ function render(movies) {
     });
 
     searchListNode.innerHTML = html;
-
-    localStorage.setItem('movies', JSON.stringify(movies));
-   // window.location.href = `movie.html?${urlParams.toString()}`;
 }
 
 
